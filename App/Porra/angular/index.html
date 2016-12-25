@@ -1,0 +1,93 @@
+<!doctype html>
+
+<!-- ASSIGN OUR ANGULAR MODULE -->
+<html ng-app="MainApp">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Ejemplo MEAN</title>
+	<!-- Cargamos bootstrap -->
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+	<!-- Cargamos angular -->
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
+	<!-- Cargamos el javascript de angular -->
+	<script src="core.js"></script>
+
+</head>
+<body ng-controller="mainController">
+	<div class="container">
+
+		<div class="jumbotron text-center" ng-prueba>
+			<h1>Porra de futbol<span class="label label-success"></span></h1>
+		</div>
+
+		<div class="row">
+			<h1 style="text-align: center;">Participantes</h1>
+			<div class="col-sm-6 col-sm-offset-1">
+				<table class="table table-striped">
+					<tr class="info">
+						<td>Nombre</td>
+						<td>Apellidos</td>
+						<td>Edad</td>
+					</tr>
+					<tr ng-repeat="persona in personas" ng-click="selectPerson(persona)">
+						<td>{{ persona.nombre }}</td>
+						<td>{{ persona.apellido }}</td>
+						<td>{{ persona.edad }}</td>						
+					</tr>
+				</table>					
+			</div>
+			<div class="col-sm-4 col-sm-offset-1 text-center">
+				<form name="myForm">
+					<div class="form-group">
+						<input type="text" class="form-control input-lg text-center" placeholder="Nombre" ng-model="newPersona.nombre" required>
+						<br>
+						<input type="text" class="form-control input-lg text-center" placeholder="Apellido" ng-model="newPersona.apellido" required>
+						<br>
+						<input type="text" class="form-control input-lg text-center" placeholder="Edad" ng-model="newPersona.edad" required>
+					</div>
+
+					<!-- Acciones que podemos realizar en el formulario -->
+					<button type="submit" class="btn btn-success btn-lg" ng-click="registrarPersona()" ng-disabled="myForm.$invalid || selected">Registrar</button>
+					<button type="submit" class="btn btn-warning btn-lg" ng-click="modificarPersona(newPersona)" ng-disabled="!newPersona.nombre || !newPersona.apellido || !newPersona.edad || !selected">Modificar</button>
+					<button type="submit" class="btn btn-danger btn-lg" ng-click="borrarPersona(newPersona)" ng-disabled="!newPersona.nombre || !newPersona.apellido || !newPersona.edad || !selected">Borrar</button>
+				</form>
+			</div>
+		</div>
+		<br><br>
+		<div class="row">
+			<h1 style="text-align: center;">Partidos</h1>
+			<div class="col-sm-6 col-sm-offset-1">
+				<table class="table table-striped">
+					<tr class="info">
+						<td>Equipo Local</td>
+						<td>Equipo Visitante</td>
+						<td>Fecha</td>
+					</tr>
+					<tr ng-repeat="partido in partidos" ng-click="selectPartido(partido)">
+						<td>{{ partido.eLocal }}</td>
+						<td>{{ partido.eVisitante }}</td>
+						<td>{{ partido.fecha }}</td>						
+					</tr>
+				</table>					
+			</div>
+			<div class="col-sm-4 col-sm-offset-1 text-center">
+				<form name="myForm">
+					<div class="form-group">
+						<input type="text" class="form-control input-lg text-center" placeholder="Equipo Local" ng-model="newPartido.eLocal" required>
+						<br>
+						<input type="text" class="form-control input-lg text-center" placeholder="Equipo Visitante" ng-model="newPartido.eVisitante" required>
+						<br>
+						<input type="text" class="form-control input-lg text-center" placeholder="Fecha" ng-model="newPartido.fecha" required>
+					</div>
+
+					<!-- Acciones que podemos realizar en el formulario -->
+					<button type="submit" class="btn btn-success btn-lg" ng-click="registrarPartido()" ng-disabled="myForm.$invalid || selectedP">Registrar</button>
+					<button type="submit" class="btn btn-warning btn-lg" ng-click="modificarPartido(newPartido)" ng-disabled="!newPartido.eLocal || !newPartido.eVisitante || !newPartido.fecha || !selectedP">Modificar</button>
+					<button type="submit" class="btn btn-danger btn-lg" ng-click="borrarPartido(newPartido)" ng-disabled="!newPartido.eLocal || !newPartido.eVisitante || !newPartido.fecha || !selectedP">Borrar</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
