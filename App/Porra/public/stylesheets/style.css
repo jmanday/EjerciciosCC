@@ -1,0 +1,127 @@
+body, html{
+  height: 100%;
+  background: rgba(0,0,0,.02);
+  background-repeat: no-repeat;
+  font-family: 'Oxygen', sans-serif;
+}
+
+.main{
+  margin-top: 70px;
+}
+
+h1.title {
+  font-size: 50px;
+  font-family: 'Passion One', cursive;
+  font-weight: 400;
+
+}
+
+
+.form-group{
+  margin-bottom: 15px;
+}
+
+label{
+  margin-bottom: 15px;
+}
+
+input,
+input::-webkit-input-placeholder {
+  font-size: 11px;
+  padding-top: 3px;
+}
+
+.main-login{
+  background-color: #3DCD58;
+  /* shadows and rounded borders */
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+
+}
+
+.main-center{
+  margin-top: 30px;
+  margin: 0 auto;
+  max-width: 330px;
+  padding: 40px 40px;
+
+}
+
+.login-button{
+  margin-top: 5px;
+}
+
+.login-register{
+  font-size: 11px;
+  text-align: center;
+}
+
+.navBardemoBasicUsage md-content .ext-content {
+  padding: 50px;
+  margin: 20px;
+  background-color: white }
+
+
+.m-t{
+  margin-top: 20px !important;
+}
+
+.m-t-n{
+  margin-top: 0px !important;
+}
+
+.m-tb{
+  margin-top: 20px !important;
+  margin-bottom: 20px !important;
+}
+
+.p-t{
+  padding-top: 20px !important;
+}
+
+.p-tb {
+  padding-top: 20px !important;
+  padding-bottom: 20px !important;
+}
+
+table.md-table thead.md-head>tr {
+  height: 56px;
+}
+
+table.md-table thead.md-head>tr th{
+  border-bottom: 1px rgba(76,175,80, 0.50) solid
+}
+
+.md-toolbar-tools{
+  font-size: 20px;
+  letter-spacing: .005em;
+  box-sizing: border-box;
+  font-weight: 400;
+}
+
+.md-toolbar-tools input{
+  width: 100%;
+  margin: 0;
+  border: none;
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.87);
+}
+.frame_login{
+  padding: 24px;
+  background:white;
+  width: 50%;
+  margin-top: 50px;
+}
+
+.img_login{
+  height: 50px;
+  margin-bottom: 16px;
+}
+
+md-nav-bar .md-nav-bar{
+  border-color: rgba(0,0,0,0) !important;
+}

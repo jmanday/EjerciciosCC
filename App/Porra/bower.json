@@ -1,0 +1,22 @@
+{
+  "name": "porra",
+  "description": "porra para partidos de fútbol",
+  "main": "porra",
+  "authors": [
+    "Jesus Garcia Manday <jmanday@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/Sistemas-Concurrentes/cret",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-material-data-table": "^0.10.9",
+    "material-design-icons": "^3.0.1"
+  }
+}

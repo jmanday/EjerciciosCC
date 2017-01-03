@@ -1,0 +1,11 @@
+//   Created by manu on 28/10/16.
+div(layout="column",layout-padding,ng-cloak)
+	md-input-container
+		label Username
+		input(ng-model='lu.login.username', type='text')
+
+	md-input-container
+		label Pasword
+		input(ng-model='lu.login.password', type='password')
+	md-button(ng-click="lu.submit()") Iniciar Sesión
+	label {{ lu.loginfail }}
