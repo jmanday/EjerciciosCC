@@ -1,0 +1,5 @@
+app: 
+  host: 35.164.236.234
+  user: ubunru
+  passwd: ubuntu
+  sudo: True
